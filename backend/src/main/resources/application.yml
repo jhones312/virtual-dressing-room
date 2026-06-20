@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: virtual-dressing-room-api
+  web:
+    resources:
+      # Assets are served only by the controller, which enforces the manifest.
+      add-mappings: false
+
+dressing-room:
+  assets:
+    root: storage/assets
+  cors:
+    allowed-origins:
+      - http://localhost:3000
+      - http://127.0.0.1:3000
